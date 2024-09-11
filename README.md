@@ -36,12 +36,12 @@ UniLife Planner was developed as the final submission for the course "Internet S
 5. Set application key:
 
    ```bash
-   `php artisan key:generate --ansi`
+   php artisan key:generate --ansi
    ```
 
 5. Execute migrations and seed data:
     ```bash
-   `php artisan migrate --seed`
+   php artisan migrate --seed
     ```
 
     You should get a warning here, please hit enter to confirm in order to bring SQLite to work.
@@ -50,19 +50,19 @@ UniLife Planner was developed as the final submission for the course "Internet S
 6. Start vite server:
 
    ```bash
-   `npm run dev`
+   npm run dev
    ```
     
 8. Start vite server:
 
    ```bash
-   `php artisan serve`
+   php artisan serve
    ```
 
 10. The app should now be running on
    
     ```bash
-     `http://localhost:8000/`
+     http://localhost:8000/
     ```
 
 
@@ -94,14 +94,14 @@ If you'd rather insert a user directly into the database via the SQLite command 
 2. Enter the SQLite shell:
 
 ```bash
-`sqlite3 /path/to/database.sqlite`
+sqlite3 /path/to/database.sqlite
 ```
    
 3. Insert a user manually into the users table. Here’s an SQL command you can use, with the necessary fields:
 
 ```bash
-`INSERT INTO users (name, email, password, email_verified_at, created_at, updated_at)`
-`VALUES ('YourName', 'youremail@example.com', '$2y$10$XXXXXXXXXXXXXXXXXXXXXXXXXX', datetime('now'), datetime('now'), datetime('now'));`
+INSERT INTO users (name, email, password, email_verified_at, created_at, updated_at)
+VALUES ('YourName', 'youremail@example.com', '$2y$10$XXXXXXXXXXXXXXXXXXXXXXXXXX', datetime('now'), datetime('now'), datetime('now'));
 ```
 
 - Replace 'YourName' with your desired username.
@@ -109,14 +109,14 @@ If you'd rather insert a user directly into the database via the SQLite command 
 - The password field requires a hashed password. You can use the bcrypt hash of your desired password. For example, here’s a bcrypt hash of the password '.myTestUser#1':
 
 ```bash
-`php artisan tinker`
-`>>> bcrypt('.myTestUser#1');`
+php artisan tinker
+>>> bcrypt('.myTestUser#1');
 ```
 Copy the generated hash and use it in the SQL command
 
 4. After inserting the user, exit the SQLite shell:
 ```bash
-   `After inserting the user, exit the SQLite shell:`
+   .exit
 ```
    
 
