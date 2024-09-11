@@ -1,66 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## UniLife Planner 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The UniLife Planner is designed to help you navigate the chaos of university life by organizing your courses and tasks. Whether you're tracking coursework, deadlines, or assignments, this planner helps you stay on top of everything – or at least make it look like you have things under control.
 
-## About Laravel
+UniLife Planner was developed as the final submission for the course "Internet Server Programming". It utilizes the Laravel framework and SQLite for database management.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Installation
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sophie4075/UniLife-Planner.git
+   
+2. Navigate to the cloned directory:
+   ```bash
+   cd UniLife-Planner
+   
+3. Create `.env` file
+   ```bash
+   cp .env.example .env
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+4. Execute:
+    ```bash
+   composer install
 
-## Learning Laravel
+5. Execute:
+    ```bash
+   npm install
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+5. Set application key:
+    ```bash
+   `php artisan key:generate --ansi`
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. Execute migrations and seed data:
+    ```bash
+   `php artisan migrate --seed`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+You should get a warning here, please hit enter to confirm in order to bring SQLite to work
+<img width="754" alt="image" src="https://github.com/user-attachments/assets/70f06d42-dd11-4b52-95ed-9f9b15e1ac91">
 
-## Laravel Sponsors
+6. Start vite server:
+    ```bash
+   `npm run dev`
+    
+7. Start vite server:
+    ```bash
+   `php artisan serve`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+8. The app should now be running on
+   ```bash
+   `http://localhost:8000/`
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Demo Account
 
-## Contributing
+To explore the UniLife Planner without setting up an account, you can log in directly using the following credentials:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+E-Mail: TestUser@test.com
+Password: .myTestUser#1
+This demo account is pre-filled with dummy data, including sample courses, tasks, and deadlines. Feel free to explore the features, make changes, and see how everything works. The data can be reset periodically, so don’t worry about breaking anything!
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Experimenting with Your Own Data
+In case you want to experiment with your own (dummy) data, you may register your own user. This can be done in two ways:
 
-## Security Vulnerabilities
+1. Register via the UI
+Simply use the registration form to create your account.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Note: When registering through the app, email verification is required, but since actual email verification is not configured for this demo, you’ll need to manually check the application log file to retrieve the verification link. You can find the link in the logs at storage/logs/laravel.log.
+<img width="446" alt="image" src="https://github.com/user-attachments/assets/99fa1787-893a-41ee-ac09-fd2b299713e8">
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. Insert a User via the SQLite Command Line
+If you'd rather insert a user directly into the database via the SQLite command line, you can follow these steps:
+
+1. Open a terminal and navigate to your project folder.
+
+2. Enter the SQLite shell:
+
+   ```bash
+   `sqlite3 /path/to/database.sqlite`
+   
+3. Insert a user manually into the users table. Here’s an SQL command you can use, with the necessary fields:
+
+   ```bash
+   `INSERT INTO users (name, email, password, email_verified_at, created_at, updated_at)`
+   `VALUES ('YourName', 'youremail@example.com', '$2y$10$XXXXXXXXXXXXXXXXXXXXXXXXXX', datetime('now'), datetime('now'), datetime('now'));`
+
+- Replace 'YourName' with your desired username.
+- Replace 'youremail@example.com' with your email.
+- The password field requires a hashed password. You can use the bcrypt hash of your desired password. For example, here’s a bcrypt hash of the password '.myTestUser#1':
+
+```bash
+`php artisan tinker`
+`>>> bcrypt('.myTestUser#1');`
+```
+Copy the generated hash and use it in the SQL command
+
+4. After inserting the user, exit the SQLite shell:
+```bash
+   `After inserting the user, exit the SQLite shell:`
+ ```
+   
+
