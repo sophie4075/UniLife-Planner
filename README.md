@@ -62,8 +62,8 @@ UniLife Planner was developed as the final submission for the course "Internet S
 10. The app should now be running on
    
     ```bash
-   `http://localhost:8000/`
-     ```
+     `http://localhost:8000/`
+    ```
 
 
 ## Demo Account
