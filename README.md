@@ -44,8 +44,8 @@ UniLife Planner was developed as the final submission for the course "Internet S
    `php artisan migrate --seed`
     ```
 
-You should get a warning here, please hit enter to confirm in order to bring SQLite to work.
-<img width="754" alt="image" src="https://github.com/user-attachments/assets/70f06d42-dd11-4b52-95ed-9f9b15e1ac91">
+    You should get a warning here, please hit enter to confirm in order to bring SQLite to work.
+    <img width="754" alt="image" src="https://github.com/user-attachments/assets/70f06d42-dd11-4b52-95ed-9f9b15e1ac91">
 
 6. Start vite server:
 
@@ -93,16 +93,16 @@ If you'd rather insert a user directly into the database via the SQLite command 
 
 2. Enter the SQLite shell:
 
-   ```bash
-   `sqlite3 /path/to/database.sqlite`
-   ```
+```bash
+`sqlite3 /path/to/database.sqlite`
+```
    
 3. Insert a user manually into the users table. Here’s an SQL command you can use, with the necessary fields:
 
-   ```bash
-   `INSERT INTO users (name, email, password, email_verified_at, created_at, updated_at)`
-   `VALUES ('YourName', 'youremail@example.com', '$2y$10$XXXXXXXXXXXXXXXXXXXXXXXXXX', datetime('now'), datetime('now'), datetime('now'));`
-   ```
+```bash
+`INSERT INTO users (name, email, password, email_verified_at, created_at, updated_at)`
+`VALUES ('YourName', 'youremail@example.com', '$2y$10$XXXXXXXXXXXXXXXXXXXXXXXXXX', datetime('now'), datetime('now'), datetime('now'));`
+```
 
 - Replace 'YourName' with your desired username.
 - Replace 'youremail@example.com' with your email.
@@ -117,6 +117,6 @@ Copy the generated hash and use it in the SQL command
 4. After inserting the user, exit the SQLite shell:
 ```bash
    `After inserting the user, exit the SQLite shell:`
- ```
+```
    
 
