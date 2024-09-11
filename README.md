@@ -45,9 +45,10 @@ UniLife Planner was developed as the final submission for the course "Internet S
     ```
 
     You should get a warning here, please hit enter to confirm in order to bring SQLite to work.
+   
     <img width="754" alt="image" src="https://github.com/user-attachments/assets/70f06d42-dd11-4b52-95ed-9f9b15e1ac91">
 
-6. Start vite server:
+7. Start vite server:
 
    ```bash
    npm run dev
@@ -118,5 +119,10 @@ Copy the generated hash and use it in the SQL command
 ```bash
    .exit
 ```
-   
+
+
+## Demo Screenshots
+<img width="1440" alt="Bildschirmfoto 2024-09-11 um 20 33 13" src="https://github.com/user-attachments/assets/39c04932-eb94-4ec3-84c8-3f8a25db9dcb">
+
+<img width="1440" alt="Bildschirmfoto 2024-09-11 um 20 32 40" src="https://github.com/user-attachments/assets/5c6b5c2d-c9a4-4db7-84cd-927a9869e48c">
 
