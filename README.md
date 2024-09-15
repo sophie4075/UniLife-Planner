@@ -54,7 +54,7 @@ UniLife Planner was developed as the final submission for the course "Internet S
    npm run dev
    ```
     
-8. Start vite server:
+8. Start Artisan server:
 
    ```bash
    php artisan serve
