@@ -1,8 +1,7 @@
 ## UniLife Planner 
 
 The UniLife Planner is designed to help you navigate the chaos of university life by organizing your courses and tasks. Whether you're tracking coursework, deadlines, or assignments, this planner helps you stay on top of everything – or at least make it look like you have things under control.
-
-UniLife Planner was developed as the final submission for the course "Internet Server Programming". It utilizes the Laravel framework and SQLite for database management.
+It utilizes the Laravel framework, interia.js and SQLite for database management.
 
 ## Installation
 
@@ -85,40 +84,6 @@ Simply use the registration form to create your account.
 Note: When registering through the app, email verification is required, but since actual email verification is not configured for this demo, you’ll need to manually check the application log file to retrieve the verification link. You can find the link in the logs at storage/logs/laravel.log.
 
 <img width="446" alt="image" src="https://github.com/user-attachments/assets/99fa1787-893a-41ee-ac09-fd2b299713e8">
-
-
-2. Insert a User via the SQLite Command Line
-If you'd rather insert a user directly into the database via the SQLite command line, you can follow these steps:
-
-1. Open a terminal and navigate to your project folder.
-
-2. Enter the SQLite shell:
-
-```bash
-sqlite3 /path/to/database.sqlite
-```
-   
-3. Insert a user manually into the users table. Here’s an SQL command you can use, with the necessary fields:
-
-```bash
-INSERT INTO users (name, email, password, email_verified_at, created_at, updated_at)
-VALUES ('YourName', 'youremail@example.com', '$2y$10$XXXXXXXXXXXXXXXXXXXXXXXXXX', datetime('now'), datetime('now'), datetime('now'));
-```
-
-- Replace 'YourName' with your desired username.
-- Replace 'youremail@example.com' with your email.
-- The password field requires a hashed password. You can use the bcrypt hash of your desired password. For example, here’s a bcrypt hash of the password '.myTestUser#1':
-
-```bash
-php artisan tinker
->>> bcrypt('.myTestUser#1');
-```
-Copy the generated hash and use it in the SQL command
-
-4. After inserting the user, exit the SQLite shell:
-```bash
-   .exit
-```
 
 
 ## Demo Screenshots
